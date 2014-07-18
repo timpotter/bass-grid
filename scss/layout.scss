@@ -25,6 +25,10 @@ h1 {
     font-family: $logo;
     font-weight: normal;
     text-transform: lowercase;
+
+    @media screen and (max-width: 400px) {
+        font-size: 4.5em;
+    }
 }
 
 h2 {

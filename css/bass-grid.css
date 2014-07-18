@@ -124,6 +124,9 @@ h1 {
   font-family: "moby", Moby, "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-transform: lowercase; }
+  @media screen and (max-width: 400px) {
+    h1 {
+      font-size: 4.5em; } }
 
 h2 {
   font-weight: normal;
