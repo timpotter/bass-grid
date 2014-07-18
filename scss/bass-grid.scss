@@ -1,0 +1,104 @@
+/*   
+Project:      Bass - A smart, lightweight responsive grid, built with Sass
+Project URI:  http://timpotter.github.io/bass-grid
+Version:      1.0
+Updated:      18th July 2014
+Author:       Tim Potter
+Author URI:   http://littlethunder.co
+*/
+
+/* Import Partials
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@import 'reset';
+@import 'layout';
+
+/* Variables
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+$base-width: 100%;
+$columns: 12; // Number of columns. 12 is used as default it's easily divisible, but you could also have 16, 24 etc
+$base: $base-width/$columns; // Calculates single column width - 100% / 12 = 8.33333%
+$gutter: 2%; // Space between columns
+$breakpoint: 640px; // Point to snap to single column layout
+$container-width: 960px; // Sets the width of the container if needed
+
+
+/* Placeholders
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+%column-style {
+  background: #2ecc71; // Delete this - Demo purposes only
+  height: 100px; // Delete this - Demo purposes only
+  float:left;
+  margin: 10px $gutter/2; // Gutter divided by 2 to sit on left and right margins equally
+  padding: 10px;
+}
+
+/* Mixins
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@mixin column ($column:12) {
+  width: $base*$column - $gutter;
+  @extend %column-style; // Inherit column style
+
+  @media screen and (max-width: $breakpoint) {
+    width: $base-width - $gutter; // Resets all columns to 100% width once breakpoint has been reached
+  }
+}
+
+
+/* Container - delete this if you don't need one
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.container {
+  width: $container-width;
+  margin:0 auto;
+  clear: both;
+  @media screen and (max-width: $container-width) {
+    width: $base-width; // Resets all columns to 100% width once breakpoint has been reached
+  }
+}
+
+/* Choose a column size
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.one {@include column(1);}
+
+.two {@include column(2);}
+
+.three {@include column(3);}
+
+.four {@include column(4);}
+
+.five {@include column(5);}
+
+.six {@include column(6);}
+
+.seven {@include column(7);}
+
+.eight {@include column(8);}
+
+.nine {@include column(9);}
+
+.ten {@include column(10);}
+
+.eleven {@include column(11);}
+
+.twelve, .full {@include column;}
+
+/* Or make your own - Delete the default columns to save bloating your CSS if you chose to make your own
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.left-column {
+  @include column(4);
+  background: #3498db;
+}
+
+.right-column {
+  @include column(8);
+  background: #3498db;
+}
+
+
+
