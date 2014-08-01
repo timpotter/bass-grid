@@ -16,22 +16,22 @@ Author URI:   http://littlethunder.co
 /* Variables
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 
-$base-width: 100%; // Best to leave this at 100%
-$columns: 12; // Number of columns. 12 is used as default it's easily divisible, but you could also have 16, 24 etc
-$base: $base-width/$columns; // Calculates single column width - 100% / 12 = 8.33333%
-$gutter: 2%; // Space between columns (Must be a percentage)
-$breakpoint: 640px; // Point to snap to single column layout
-$container-width: 960px; // Sets the width of the container if needed
+$base-width: 100%;            // Best to leave this at 100%
+$columns: 12;                 // Number of columns. 12 is used as default it's easily divisible, but you could also have 16, 24 etc
+$base: $base-width/$columns;  // Calculates single column width - 100% / 12 = 8.33333%
+$gutter: 2%;                  // Space between columns (Must be a percentage)
+$breakpoint: 640px;           // Point to snap to single column layout
+$container-width: 960px;      // Sets the width of the container if needed
 
 
 /* Placeholders
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 
 %column-style {
-  background: #2ecc71; // Delete this - Demo purposes only
-  height: 100px; // Delete this - Demo purposes only
+  background: #2ecc71;        // Delete this - Demo purposes only
+  height: 100px;              // Delete this - Demo purposes only
   float:left;
-  margin: 10px $gutter/2; // Gutter divided by 2 to sit on left and right margins equally
+  margin: 10px $gutter/2;     // Gutter divided by 2 to sit on left and right margins equally
   padding: 10px;
 }
 
@@ -40,7 +40,7 @@ $container-width: 960px; // Sets the width of the container if needed
 
 @mixin column ($column:12) {
   width: $base*$column - $gutter;
-  @extend %column-style; // Inherit column style
+  @extend %column-style;      // Inherit column style
 
   @media screen and (max-width: $breakpoint) {
     width: $base-width - $gutter; // Resets all columns to 100% width once breakpoint has been reached
@@ -56,7 +56,7 @@ $container-width: 960px; // Sets the width of the container if needed
   margin:0 auto;
   clear: both;
   @media screen and (max-width: $container-width) {
-    width: $base-width; // Resets all columns to 100% width once breakpoint has been reached
+    width: $base-width;     // Resets all columns to 100% width once breakpoint has been reached
   }
 }
 
