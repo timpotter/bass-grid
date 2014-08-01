@@ -1,8 +1,7 @@
 Bass Grid
 =========
 
-A smart, lightweight responsive grid, built with Sass.
-------------------------------------------------------
+###A smart, lightweight responsive grid, built with Sass.
 
 ![alt text](http://littlethunder.co/dev/bass-grid/assets/bass-preview.jpg "Bass Grid")
 
