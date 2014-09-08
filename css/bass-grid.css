@@ -104,6 +104,10 @@ input,
 textarea {
   -webkit-appearance: none; }
 
+/* Turns off Chrome Default Focus Outline */
+* {
+  outline: none; }
+
 /* This is for the styling of the demo page only and is not needed
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Variables

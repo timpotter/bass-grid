@@ -110,3 +110,8 @@ input,
 textarea {
     -webkit-appearance: none;
 }
+
+/* Turns off Chrome Default Focus Outline */
+ * {
+    outline:none;
+}
