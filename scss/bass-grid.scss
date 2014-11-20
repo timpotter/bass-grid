@@ -1,20 +1,20 @@
 /*   
 Project:      Bass - A smart, lightweight responsive grid, built with Sass
 Project URI:  http://timpotter.github.io/bass-grid
-Version:      1.1
-Updated:      3rd September 2014
+Version:      1.1.1
+Updated:      20th November 2014
 Author:       Tim Potter
 Author URI:   http://littlethunder.co
 */
 
-/* Import Partials
------------------------------------------------------------------------------------------------------------------------------------------- */
+// Import Partials
+// ------------------------------------------------------------------------------------------------------------------------------------------ */
 
 @import 'reset';
 @import 'layout';
 
-/* Variables
------------------------------------------------------------------------------------------------------------------------------------------- */
+// Variables
+// ------------------------------------------------------------------------------------------------------------------------------------------ */
 
 $base-width: 100%;            // Best to leave this at 100%
 $columns: 12;                 // Number of columns. 12 is used as default it's easily divisible, but you could also have 16, 24 etc
@@ -24,8 +24,8 @@ $breakpoint: 640px;           // Point to snap to single column layout
 $container-width: 960px;      // Sets the width of the container if needed
 
 
-/* Placeholders
------------------------------------------------------------------------------------------------------------------------------------------- */
+// Placeholders
+// ------------------------------------------------------------------------------------------------------------------------------------------ */
 
 %column-style {
   background: #2ecc71;        // Delete this - Demo purposes only
@@ -35,8 +35,8 @@ $container-width: 960px;      // Sets the width of the container if needed
   padding: 10px;
 }
 
-/* Mixins
------------------------------------------------------------------------------------------------------------------------------------------- */
+// Mixins
+// ------------------------------------------------------------------------------------------------------------------------------------------ */
 
 @mixin column ($column:12) {
   width: $base*$column - $gutter;
