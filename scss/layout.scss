@@ -8,6 +8,10 @@ $midnight: #34495e;
 $sans-stack: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $logo: "moby", Moby, "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+@mixin offset ($column:1) {
+    background: #e74c3c;
+}
+
 
 /* Typography
 ------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -73,7 +77,10 @@ header {
 
 .container {
     color: white;
-    margin-top: 40px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    border: 1px solid #ececec;
+    padding: 0.5%;
 
     h3 {
         font-size: 1.625em; /* 26/16 */
@@ -110,6 +117,38 @@ footer {
             text-decoration: underline;
         }
     }
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven,
+.twelve,
+.full {
+    background: #2ecc71;
+    height: 100px;
+}
+
+
+.offset-by-one,
+.offset-by-two,
+.offset-by-three, 
+.offset-by-four,
+.offset-by-five,
+.offset-by-six,
+.offset-by-seven,
+.offset-by-eight,
+.offset-by-nine,
+.offset-by-ten,
+.offset-by-eleven {
+    background: #9b59b6;
 }
 
 /* Clearfix

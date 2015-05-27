@@ -1,8 +1,8 @@
 /*   
 Project:      Bass - A smart, lightweight responsive grid, built with Sass
 Project URI:  http://timpotter.github.io/bass-grid
-Version:      1.1.2
-Updated:      5th May 2015
+Version:      1.2.0
+Updated:      27th May 2015
 Author:       Tim Potter
 Author URI:   http://littlethunder.co
 */
@@ -22,8 +22,6 @@ $container-width: 960px;      // Sets the width of the container if needed
 // ------------------------------------------------------------------------------------------------------------------------------------------
 
 %column-style {
-  background: #2ecc71;        // Delete this - Demo purposes only
-  height: 100px;              // Delete this - Demo purposes only
   float:left;
   margin: 10px $gutter/2;     // Gutter divided by 2 to sit on left and right margins equally
   padding: 10px;
@@ -41,6 +39,13 @@ $container-width: 960px;      // Sets the width of the container if needed
   }
 }
 
+@mixin offset ($column:1) {
+  margin-left: $base*$column + $gutter/2;
+    
+  @media screen and (max-width: $breakpoint) {
+    margin-left: $gutter/2; // Removes offset once breakpoint has been reached
+  }
+}
 
 /* Container - delete this if you don't need one
 ------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -88,6 +93,31 @@ img {
 
 .twelve, .full {@include column;}
 
+/* Offsets for positioning columns
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.offset-by-one {@include offset(1);}
+
+.offset-by-two {@include offset(2);}
+
+.offset-by-three {@include offset(3);}
+
+.offset-by-four {@include offset(4);}
+
+.offset-by-five {@include offset(5);}
+
+.offset-by-six {@include offset(6);}
+
+.offset-by-seven {@include offset(7);}
+
+.offset-by-eight {@include offset(8);}
+
+.offset-by-nine {@include offset(9);}
+
+.offset-by-ten {@include offset(10);}
+
+.offset-by-eleven {@include offset(11);}
+
 /* Or make your own - Delete the default columns to save bloating your CSS if you chose to make your own
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 
@@ -100,6 +130,3 @@ img {
   @include column(8);
   background: #3498db;
 }
-
-
-

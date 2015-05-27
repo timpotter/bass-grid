@@ -101,14 +101,12 @@ textarea {
 /*   
 Project:      Bass - A smart, lightweight responsive grid, built with Sass
 Project URI:  http://timpotter.github.io/bass-grid
-Version:      1.1.2
-Updated:      5th May 2015
+Version:      1.2.0
+Updated:      27th May 2015
 Author:       Tim Potter
 Author URI:   http://littlethunder.co
 */
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .full, .left-column, .right-column {
-  background: #2ecc71;
-  height: 100px;
   float: left;
   margin: 10px 1%;
   padding: 10px; }
@@ -202,6 +200,74 @@ img {
     .twelve, .full {
       width: 98%; } }
 
+/* Offsets for positioning columns
+------------------------------------------------------------------------------------------------------------------------------------------ */
+.offset-by-one {
+  margin-left: 9.33333%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-one {
+      margin-left: 1%; } }
+
+.offset-by-two {
+  margin-left: 17.66667%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-two {
+      margin-left: 1%; } }
+
+.offset-by-three {
+  margin-left: 26%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-three {
+      margin-left: 1%; } }
+
+.offset-by-four {
+  margin-left: 34.33333%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-four {
+      margin-left: 1%; } }
+
+.offset-by-five {
+  margin-left: 42.66667%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-five {
+      margin-left: 1%; } }
+
+.offset-by-six {
+  margin-left: 51%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-six {
+      margin-left: 1%; } }
+
+.offset-by-seven {
+  margin-left: 59.33333%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-seven {
+      margin-left: 1%; } }
+
+.offset-by-eight {
+  margin-left: 67.66667%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-eight {
+      margin-left: 1%; } }
+
+.offset-by-nine {
+  margin-left: 76%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-nine {
+      margin-left: 1%; } }
+
+.offset-by-ten {
+  margin-left: 84.33333%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-ten {
+      margin-left: 1%; } }
+
+.offset-by-eleven {
+  margin-left: 92.66667%; }
+  @media screen and (max-width: 640px) {
+    .offset-by-eleven {
+      margin-left: 1%; } }
+
 /* Or make your own - Delete the default columns to save bloating your CSS if you chose to make your own
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 .left-column {
@@ -276,7 +342,10 @@ header {
 
 .container {
   color: white;
-  margin-top: 40px; }
+  margin: 40px auto;
+  background: #f9f9f9;
+  border: 1px solid #ececec;
+  padding: 0.5%; }
   .container h3 {
     font-size: 1.625em;
     /* 26/16 */
@@ -306,6 +375,35 @@ footer {
     text-decoration: none; }
     footer a:hover {
       text-decoration: underline; }
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven,
+.twelve,
+.full {
+  background: #2ecc71;
+  height: 100px; }
+
+.offset-by-one,
+.offset-by-two,
+.offset-by-three,
+.offset-by-four,
+.offset-by-five,
+.offset-by-six,
+.offset-by-seven,
+.offset-by-eight,
+.offset-by-nine,
+.offset-by-ten,
+.offset-by-eleven {
+  background: #9b59b6; }
 
 /* Clearfix
 ------------------------------------------------------------------------------------------------------------------------------------------ */
