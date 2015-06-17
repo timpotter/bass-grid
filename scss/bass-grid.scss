@@ -1,11 +1,20 @@
 /*   
 Project:      Bass - A smart, lightweight responsive grid, built with Sass
 Project URI:  http://timpotter.github.io/bass-grid
-Version:      1.2.0
-Updated:      27th May 2015
+Version:      1.2.1
+Updated:      17th June 2015
 Author:       Tim Potter
 Author URI:   http://littlethunder.co
 */
+
+// Universal Box Sizing
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+*, 
+*:before, 
+*:after {
+  box-sizing: border-box;     // Applies a natural box layout model to all elements
+}
 
 // Variables
 // ------------------------------------------------------------------------------------------------------------------------------------------

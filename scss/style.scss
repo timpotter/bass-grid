@@ -1,6 +1,6 @@
 // Import Partials
 // ---------------
 
-@import 'reset';
-@import 'bass-grid';
-@import 'layout'; // Everything in layout.scss is for the styling of the demo page only and is not needed
+@import 'reset';          // This is a reset and although it's not needed it is recommended you use one
+@import 'bass-grid';      // This is all you'll need
+@import 'layout';         // Everything in layout.scss is for the styling of the demo page only and is not needed
