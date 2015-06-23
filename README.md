@@ -5,6 +5,19 @@ Bass Grid
 
 ![alt text](http://littlethunder.co/dev/bass-grid/assets/bass-preview.jpg "Bass Grid")
 
+Install
+=======
+
+###Manually
+Download the latest release and copy the ```bass-grid.scss``` file over to your project.
+
+###Bower
+
+```$ bower install https://github.com/timpotter/bass-grid.git```
+
+Usage
+=====
+
 Bass uses the power of Sass to calculate flexible column widths and layouts based on the following customisable variables. 
 
 ```
