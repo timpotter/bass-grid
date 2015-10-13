@@ -13,7 +13,7 @@ Download the latest release and copy the ```bass-grid.scss``` file over to your 
 
 ###Bower
 
-```$ bower install https://github.com/timpotter/bass-grid.git```
+```$ bower install timpotter/bass-grid```
 
 Usage
 -----
