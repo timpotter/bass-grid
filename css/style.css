@@ -211,67 +211,67 @@ img {
 /* Offsets for positioning columns
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 .offset-by-1 {
-  margin-left: 9.3333333333%; }
+  margin-left: calc(8.3333333333% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-1 {
       margin-left: 1%; } }
 
 .offset-by-2 {
-  margin-left: 17.6666666667%; }
+  margin-left: calc(16.6666666667% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-2 {
       margin-left: 1%; } }
 
 .offset-by-3 {
-  margin-left: 26%; }
+  margin-left: calc(25% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-3 {
       margin-left: 1%; } }
 
 .offset-by-4 {
-  margin-left: 34.3333333333%; }
+  margin-left: calc(33.3333333333% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-4 {
       margin-left: 1%; } }
 
 .offset-by-5 {
-  margin-left: 42.6666666667%; }
+  margin-left: calc(41.6666666667% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-5 {
       margin-left: 1%; } }
 
 .offset-by-6 {
-  margin-left: 51%; }
+  margin-left: calc(50% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-6 {
       margin-left: 1%; } }
 
 .offset-by-7 {
-  margin-left: 59.3333333333%; }
+  margin-left: calc(58.3333333333% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-7 {
       margin-left: 1%; } }
 
 .offset-by-8 {
-  margin-left: 67.6666666667%; }
+  margin-left: calc(66.6666666667% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-8 {
       margin-left: 1%; } }
 
 .offset-by-9 {
-  margin-left: 76%; }
+  margin-left: calc(75% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-9 {
       margin-left: 1%; } }
 
 .offset-by-10 {
-  margin-left: 84.3333333333%; }
+  margin-left: calc(83.3333333333% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-10 {
       margin-left: 1%; } }
 
 .offset-by-11 {
-  margin-left: 92.6666666667%; }
+  margin-left: calc(91.6666666667% + 1%); }
   @media screen and (max-width: 640px) {
     .offset-by-11 {
       margin-left: 1%; } }

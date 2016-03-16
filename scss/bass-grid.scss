@@ -55,7 +55,7 @@ $container-width: 1200px;     // Sets the width of the container if needed
 }
 
 @mixin offset ($column:1) {
-  margin-left: $base*$column + $gutter/2;
+  margin-left: calc(#{$base*$column} + #{$gutter/2});
 
   @media screen and (max-width: $breakpoint) {
     margin-left: $gutter/2; // Removes offset once breakpoint has been reached
