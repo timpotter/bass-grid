@@ -105,15 +105,23 @@ Author URI:   http://littlethunder.co
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .side-nav, .content {
   float: left;
-  margin: 10px 1%;
-  padding: 10px; }
+  margin: 1%;
+  padding: 20px 10px; }
 
-/* Container - delete this if you don't need one
+/* Flex Container - Enables a flex context for all its direct children
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 1200px;
   margin: 0 auto;
   clear: both; }
@@ -126,91 +134,79 @@ Author URI:   http://littlethunder.co
 img {
   max-width: 100%; }
 
-/* Choose a column size
+/* Columns
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 .col-1 {
-  width: 6.3333333333%; }
+  width: calc(8.3333333333% - 2%); }
   @media screen and (max-width: 640px) {
     .col-1 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-2 {
-  width: 14.6666666667%; }
+  width: calc(16.6666666667% - 2%); }
   @media screen and (max-width: 640px) {
     .col-2 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-3 {
-  width: 23%; }
+  width: calc(25% - 2%); }
   @media screen and (max-width: 640px) {
     .col-3 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-4 {
-  width: 31.3333333333%; }
+  width: calc(33.3333333333% - 2%); }
   @media screen and (max-width: 640px) {
     .col-4 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-5 {
-  width: 39.6666666667%; }
+  width: calc(41.6666666667% - 2%); }
   @media screen and (max-width: 640px) {
     .col-5 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-6 {
-  width: 48%; }
+  width: calc(50% - 2%); }
   @media screen and (max-width: 640px) {
     .col-6 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-7 {
-  width: 56.3333333333%; }
+  width: calc(58.3333333333% - 2%); }
   @media screen and (max-width: 640px) {
     .col-7 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-8 {
-  width: 64.6666666667%; }
+  width: calc(66.6666666667% - 2%); }
   @media screen and (max-width: 640px) {
     .col-8 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-9 {
-  width: 73%; }
+  width: calc(75% - 2%); }
   @media screen and (max-width: 640px) {
     .col-9 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-10 {
-  width: 81.3333333333%; }
+  width: calc(83.3333333333% - 2%); }
   @media screen and (max-width: 640px) {
     .col-10 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-11 {
-  width: 89.6666666667%; }
+  width: calc(91.6666666667% - 2%); }
   @media screen and (max-width: 640px) {
     .col-11 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .col-12 {
-  width: 98%; }
+  width: calc(100% - 2%); }
   @media screen and (max-width: 640px) {
     .col-12 {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 /* Offsets for positioning columns
 ------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -280,29 +276,46 @@ img {
     .offset-by-11 {
       margin-left: 1%; } }
 
-.offset-by-12 {
-  margin-left: 101%; }
-  @media screen and (max-width: 640px) {
-    .offset-by-12 {
-      margin-left: 1%; } }
-
-/* Or make your own - Delete the default columns to save bloating your CSS if you chose to make your own
+/* Or define your own columns - delete if you plan to use the standard
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 .side-nav {
-  width: 31.3333333333%;
+  width: calc(33.3333333333% - 2%);
   background: #3498db; }
   @media screen and (max-width: 640px) {
     .side-nav {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
 
 .content {
-  width: 64.6666666667%;
+  width: calc(66.6666666667% - 2%);
   background: #3498db; }
   @media screen and (max-width: 640px) {
     .content {
-      width: 98%;
-      flex-direction: column; } }
+      width: calc(100% - 2%); } }
+
+/* Use .parent to remove padding from parent column when nesting child columns
+------------------------------------------------------------------------------------------------------------------------------------------ */
+.parent {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media screen and (max-width: 640px) {
+    .parent {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .parent > div {
+    margin: 0; }
+    @media screen and (max-width: 640px) {
+      .parent > div {
+        width: 100%; } }
 
 /* Everything in layout.scss is for the styling of the demo page only and is not needed
 ------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -370,8 +383,7 @@ header {
     font-size: 1.625em;
     /* 26/16 */
     display: block;
-    clear: both;
-    margin-top: 6px; }
+    clear: both; }
   .container p {
     font-size: 0.8125em;
     /* 13/16 */
@@ -467,6 +479,9 @@ footer {
 
 .offset-by-12 {
   background: #9b59b6; }
+
+.parent > div {
+  background: #54d98c; }
 
 /* Clearfix
 ------------------------------------------------------------------------------------------------------------------------------------------ */

@@ -19,33 +19,38 @@ Author URI:   http://littlethunder.co
 // Variables
 // ------------------------------------------------------------------------------------------------------------------------------------------
 
+// Column Setup
 $base-width: 100%;            // Best to leave this at 100%
 $columns: 12;                 // Number of columns. 12 is used as default it's easily divisible, but you could also have 16, 24 etc
 $base: $base-width/$columns;  // Calculates single column width - 100% / 12 = 8.33333%
-$gutter: 2%;                  // Space between columns (Must be a percentage)
+
+// Gutter and Padding
+$gutter: 2%;                  // Space between columns (px, %, em, or rem)
+$padding: 20px 10px;          // Padding of each column (you can also use shorthand 40px 10px)
+
+// Widths
 $breakpoint: 640px;           // Point to snap to single column layout
-$container-width: 1200px;      // Sets the width of the container if needed
+$container-width: 1200px;     // Sets the width of the container if needed
 
 
 // Placeholders
 // ------------------------------------------------------------------------------------------------------------------------------------------
 
 %column-style {
-  float: left;                // For older browsers - has no effect on Flexbox
-  margin: 10px $gutter/2;     // Gutter divided by 2 to sit on left and right margins equally
-  padding: 10px;
+  float: left;               // For older browsers - has no effect on Flexbox
+  margin: $gutter/2;         // Gutter divided by 2 to sit on left and right margins equally
+  padding: $padding;
 }
 
 // Mixins
 // ------------------------------------------------------------------------------------------------------------------------------------------
 
 @mixin column ($column:$columns) {
-  width: $base*$column - $gutter;
+  width: calc(#{$base*$column} - #{$gutter});
   @extend %column-style;     // Inherit column style
 
   @media screen and (max-width: $breakpoint) {
-    width: $base-width - $gutter; // Resets all columns to 100% width once breakpoint has been reached
-    flex-direction: column;
+    width: calc(#{$base-width} - #{$gutter}); // Resets all columns to full width once breakpoint has been reached
   }
 }
 
@@ -57,7 +62,7 @@ $container-width: 1200px;      // Sets the width of the container if needed
   }
 }
 
-/* Container - delete this if you don't need one
+/* Flex Container - Enables a flex context for all its direct children
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 
 .container {
@@ -79,8 +84,10 @@ img {
   max-width: 100%;
 }
 
-/* Choose a column size
+/* Columns
 ------------------------------------------------------------------------------------------------------------------------------------------ */
+// Loop to create the number of specified $columns, output as .col-1, .col-2 etc
+
 
 @for $i from 1 through $columns {
   .col-#{$i} {
@@ -90,14 +97,15 @@ img {
 
 /* Offsets for positioning columns
 ------------------------------------------------------------------------------------------------------------------------------------------ */
+// Loop to create the offset columns, output as .offset-by-1, .offset-by-2 etc
 
-@for $i from 1 through $columns {
+@for $i from 1 through $columns - 1 {
   .offset-by-#{$i} {
     @include offset($i);
   }
 }
 
-/* Or make your own - Delete the default columns to save bloating your CSS if you chose to make your own
+/* Or define your own columns - delete if you plan to use the standard
 ------------------------------------------------------------------------------------------------------------------------------------------ */
 
 .side-nav {
@@ -108,4 +116,23 @@ img {
 .content {
   @include column(8);
   background: #3498db;
+}
+
+/* Use .parent to remove padding from parent column when nesting child columns
+------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.parent {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: $breakpoint) {
+    flex-direction: column;
+  }
+
+  > div {
+    margin: 0;
+    @media screen and (max-width: $breakpoint) {
+      width: 100%;
+    }
+  }
 }
