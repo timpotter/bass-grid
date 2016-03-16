@@ -51,7 +51,7 @@ a.button {
     border-radius: 7px;
     text-decoration: none;
     margin-top: 30px;
-    
+
     &:hover {
         background: transparent;
         color: $midnight;
@@ -112,44 +112,26 @@ footer {
     a {
         color: $midnight;
         text-decoration: none;
-    
+
         &:hover {
             text-decoration: underline;
         }
     }
 }
 
-.one,
-.two,
-.three,
-.four,
-.five,
-.six,
-.seven,
-.eight,
-.nine,
-.ten,
-.eleven,
-.twelve,
-.full {
+@for $i from 1 through $columns {
+  .col-#{$i} {
     background: #2ecc71;
-    height: 100px;
+  }
 }
 
 
-.offset-by-one,
-.offset-by-two,
-.offset-by-three, 
-.offset-by-four,
-.offset-by-five,
-.offset-by-six,
-.offset-by-seven,
-.offset-by-eight,
-.offset-by-nine,
-.offset-by-ten,
-.offset-by-eleven {
+@for $i from 1 through $columns {
+  .offset-by-#{$i} {
     background: #9b59b6;
+  }
 }
+
 
 /* Clearfix
 ------------------------------------------------------------------------------------------------------------------------------------------ */

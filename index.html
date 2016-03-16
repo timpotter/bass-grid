@@ -22,117 +22,121 @@
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/ycb0afx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    
+
 
 </head>
 <body>
 
 <header>
 	<h1>Bass</h1>
-	<h2>A smart, lightweight responsive grid, built with Sass</h2>
+	<h2>A smart, lightweight Flexbox grid, built with Sass</h2>
 	<a href="https://github.com/timpotter/bass-grid" class="button">View on GitHub</a>
-	<p class="version">v1.2.1, June 2015</p>
+	<p class="version">v1.3, March 2016</p>
 </header>
 
 <div class="container group">
 
 	<!-- Row 1 -->
-	<div class="one">
-		<h3>1</h3> 
-		<p>.one</p>
+	<div class="col-1">
+		<h3>1</h3>
+		<p>.col-1</p>
 	</div>
 
-	<div class="two">
-		<h3>2</h3> 
-		<p>.two</p>
-	</div>
-	
-	<div class="three">
-		<h3>3</h3> 
-		<p>.three</p>
+	<div class="col-2">
+		<h3>2</h3>
+		<p>.col-2</p>
 	</div>
 
-	<div class="six">
-		<h3>6</h3> 
-		<p>.six</p>
+	<div class="col-3">
+		<h3>3</h3>
+		<p>.col-3</p>
+	</div>
+
+	<div class="col-6">
+		<h3>6</h3>
+		<p>.col-6</p>
 	</div>
 
 	<!-- Row 2 -->
-	<div class="five">
-		<h3>5</h3> 
-		<p>.five</p>
+	<div class="col-5">
+		<h3>5</h3>
+		<p>.col-5</p>
 	</div>
 
-	<div class="seven">
-		<h3>7</h3> 
-		<p>.seven</p>
+	<div class="col-7">
+		<h3>7</h3>
+		<p>.col-7</p>
 	</div>
 
 	<!-- Row 3 -->
-	<div class="full">
-		<h3>12</h3> 
-		<p>.twelve/.full</p>
+	<div class="col-12">
+		<h3>12</h3>
+		<p>.col-12</p>
 	</div>
 
-	<!-- Row 4 -->
-	<div class="left-column">
-		<h3>4</h3>
-		<p>.left-column (custom)</p>
-	</div>
+</div>
 
-	<div class="right-column">
-		<h3>8</h3>
-		<p>.right-column (custom)</p>
-	</div>
-	
+<h2>Define your own custom columns</h2>
+
+<div class="container group">
+  <!-- Row 4 -->
+  <div class="side-nav">
+    <h3>4</h3>
+    <p>.side-nav (custom)</p>
+  </div>
+
+  <div class="content">
+    <h3>8</h3>
+    <p>.content (custom)</p>
+  </div>
 </div>
 
 <h2>Total control over positioning using offsets</h2>
 
 <div class="container group">
-	
+
 	<!-- Row 5 -->
-	
-	<div class="eleven offset-by-one">
+
+	<div class="col-11 offset-by-1">
 		<h3>offset by 1</h3>
-		<p>.eleven .offset-by-one</p>
+		<p>.col-11 .offset-by-1</p>
 	</div>
-	
+
 	<!-- Row 6 -->
-	
-	<div class="eight offset-by-two">
+
+	<div class="col-8 offset-by-2">
 		<h3>offset by 2</h3>
-		<p>.eight .offset-by-two</p>
+		<p>.col-8 .offset-by-2</p>
 	</div>
-	
+
 	<!-- Row 7 -->
-	
-	<div class="seven offset-by-three">
+
+	<div class="col-7 offset-by-3">
 		<h3>offset by 3</h3>
-		<p>.seven .offset-by-three</p>
+		<p>.col-7 .offset-by-3</p>
 	</div>
-	
+
 	<!-- Row 8 -->
-	
-	<div class="six offset-by-six">
+
+	<div class="col-6 offset-by-6">
 		<h3>offset by 6</h3>
-		<p>.six .offset-by-six</p>
+		<p>.col-6 .offset-by-6</p>
 	</div>
-	
+
 	<!-- Row 9 -->
-	
-	<div class="three offset-by-nine">
+
+	<div class="col-3 offset-by-9">
 		<h3>offset by 9</h3>
-		<p>.three .offset-by-nine</p>
+		<p>.col-3 .offset-by-9</p>
 	</div>
-	
+
 	<!-- Row 10 -->
-	
-	<div class="four offset-by-four">
+
+	<div class="col-4 offset-by-4">
 		<h3>offset by 4</h3>
-		<p>.four .offset-by-four</p>
+		<p>.col-4 .offset-by-4</p>
 	</div>
-	
+
 
 </div><!-- /container -->
 
