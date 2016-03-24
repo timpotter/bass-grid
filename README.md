@@ -1,6 +1,9 @@
 Bass Grid
 =========
 
+##Development is happening on the [dev-flexbox](https://github.com/timpotter/bass-grid/tree/dev-flexbox) branch
+_I'm working towards a v2.0 release, with the grid rebuilt using Flexbox. Other updates include, better nesting of child columns and auto-generation of columns based on the `$columns` variable._
+
 ###A smart, lightweight responsive grid, built with Sass.
 
 ![alt text](http://littlethunder.co/dev/bass-grid/assets/bass-preview.jpg "Bass Grid")
