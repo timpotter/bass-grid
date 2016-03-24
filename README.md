@@ -1,11 +1,11 @@
-Bass Grid
-=========
+Bass Grid v1.3
+==============
 
-###A smart, lightweight responsive grid, built with Sass.
+### A smart, lightweight Flexbox grid, built with Sass.
 
-![alt text](http://littlethunder.co/dev/bass-grid/assets/bass-preview.jpg "Bass Grid")
+## This version is currently in development. Feel free to use it and post any issues you encounter
 
-Bass uses the power of Sass to calculate flexible column widths and layouts based on the following customisable variables. 
+Bass uses the power of Sass to create and calculate flexible column widths and layouts based on the following customisable variables.
 
 ```
 $base-width: 100%; 				// Best to leave this at 100%
@@ -22,4 +22,3 @@ $container-width: 960px; 		// Sets the width of the container if needed
 
 ```
 Want to change the number of columns or the breakpoint? Simply amend these values and using a Sass [pre-processor](http://sass-lang.com/install), compile `bass-grid.scss:bass-grid.css`.
-
